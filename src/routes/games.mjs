@@ -9,6 +9,7 @@ let games = [
     description:
       "A game where two teams with 11 players per team play against each other",
     players: "22",
+    categories: "Men / Women",
   },
   {
     id: "2",
@@ -16,12 +17,15 @@ let games = [
     description:
       "A game where 2 teams with 5 huge tall players compite against each other",
     players: "10",
+    categories: "Men / Women",
   },
   {
     id: "3",
     title: "Tennis",
     description: "A game which can be played in singles mode or doubles mode",
     players: "2/4",
+    categories:
+      "Men - Singles & Doubles / Women - Singles & Doubles / Mixed - Doubles",
   },
 ];
 
