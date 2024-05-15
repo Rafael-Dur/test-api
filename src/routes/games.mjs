@@ -70,7 +70,7 @@ router.get("/games", (req, res) => {
 });
 
 // GET a game by ID
-router.get("/games/:gameID", (req, res) => {
+router.get("/games/:gameId", (req, res) => {
   const gameId = req.params.gameId;
   const game = games.filter((game) => game.id === gameId);
   res.json(game);
@@ -79,7 +79,7 @@ router.get("/games/:gameID", (req, res) => {
 // POST a new game
 router.post("/games", (req, res) => {
   const game = req.body;
-  games.id = (games.length + 1).toString();
+  game.id = (games.length + 1).toString();
   games.push(game);
   res.status(201).json(games);
 });
