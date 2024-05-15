@@ -27,6 +27,41 @@ let games = [
     categories:
       "Men - Singles & Doubles / Women - Singles & Doubles / Mixed - Doubles",
   },
+  {
+    id: "4",
+    title: "Boxing",
+    description: "A 1 vs 1 fight",
+    players: "2",
+    categories: "Men / Women, several divisions based on weight for both",
+  },
+  {
+    id: "5",
+    title: "Volleyball",
+    description: "2 teams, a net, and a ball",
+    players: "12",
+    categories: "Men / Women",
+  },
+  {
+    id: "6",
+    title: "Fencing",
+    description: "The french way of the sword",
+    players: "2",
+    categories: "Men / Women",
+  },
+  {
+    id: "7",
+    title: "Karate",
+    description: "Japanese martial art",
+    players: "2",
+    categories: "Men / Women",
+  },
+  {
+    id: "8",
+    title: "Taekwondo",
+    description: "Korean martial art, heavily leg focused",
+    players: "2",
+    categories: "Men / Women",
+  },
 ];
 
 // GET all games
