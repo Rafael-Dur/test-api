@@ -89,7 +89,7 @@ router.post("/games", (req, res) => {
 router.delete("/games/:gameId", (req, res) => {
   const gameId = req.params.gameId;
   games = games.filter((game) => game.id !== gameId);
-  res.sendStatus(204).json(games);
+  res.status(204).json(games);
 });
 
 // PUT (update) a game by ID
