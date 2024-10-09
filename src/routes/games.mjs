@@ -1,10 +1,11 @@
 import express from "express";
 const router = express.Router();
+import { v4 as uuidv4 } from "uuid";
 
-// Sample data (tasks)
+// Sample data (games)
 let games = [
   {
-    id: "1",
+    id: uuidv4(),
     title: "Football",
     description:
       "A game where two teams with 11 players per team play against each other",
@@ -12,7 +13,7 @@ let games = [
     categories: "Men / Women",
   },
   {
-    id: "2",
+    id: uuidv4(),
     title: "Basketball",
     description:
       "A game where 2 teams with 5 huge tall players compite against each other",
@@ -20,7 +21,7 @@ let games = [
     categories: "Men / Women",
   },
   {
-    id: "3",
+    id: uuidv4(),
     title: "Tennis",
     description: "A game which can be played in singles mode or doubles mode",
     players: "2/4",
@@ -28,35 +29,35 @@ let games = [
       "Men - Singles & Doubles / Women - Singles & Doubles / Mixed - Doubles",
   },
   {
-    id: "4",
+    id: uuidv4(),
     title: "Boxing",
     description: "A 1 vs 1 fight",
     players: "2",
     categories: "Men / Women, several divisions based on weight for both",
   },
   {
-    id: "5",
+    id: uuidv4(),
     title: "Volleyball",
     description: "2 teams, a net, and a ball",
     players: "12",
     categories: "Men / Women",
   },
   {
-    id: "6",
+    id: uuidv4(),
     title: "Fencing",
     description: "The french way of the sword",
     players: "2",
     categories: "Men / Women",
   },
   {
-    id: "7",
+    id: uuidv4(),
     title: "Karate",
     description: "Japanese martial art",
     players: "2",
     categories: "Men / Women",
   },
   {
-    id: "8",
+    id: uuidv4(),
     title: "Taekwondo",
     description: "Korean martial art, heavily leg focused",
     players: "2",
@@ -79,7 +80,7 @@ router.get("/games/:gameId", (req, res) => {
 // POST a new game
 router.post("/games", (req, res) => {
   const game = req.body;
-  game.id = (games.length + 1).toString();
+  game.id = uuidv4();
   games.push(game);
   res.status(201).json(games);
 });
