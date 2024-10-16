@@ -99,7 +99,7 @@ router.put("/games/:gameId", (req, res) => {
 
   games = games.map((game) => {
     if (game.id === gameId) {
-      return { ...games, ...updatedGame, id: gameId };
+      return { ...game, ...updatedGame, id: gameId };
     }
     return game;
   });
